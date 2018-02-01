@@ -1,0 +1,14 @@
+uuid: 19ac2863-0abe-4d0b-a8f2-f3b7da91165c
+name: 'Contribution 8'
+mail: maheshwaran.j@innoppl.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
