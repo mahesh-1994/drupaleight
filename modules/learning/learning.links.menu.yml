@@ -1,0 +1,5 @@
+learning.simple:
+  title: Simple Learning Page
+  route_name: learning_simple
+  parent: main
+  menu_name: main

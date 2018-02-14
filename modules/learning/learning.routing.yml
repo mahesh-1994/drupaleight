@@ -1,0 +1,8 @@
+learning_simple:
+  path: 'learning/page/simple'
+  defaults:
+    _controller: '\Drupal\learning\Controller\LearningController::simple'
+    _title: 'Simple Page'
+  requirements:
+    _permission: 'access learning content'
+

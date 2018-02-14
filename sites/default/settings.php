@@ -295,7 +295,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'D1F6H-C8lD1MFn9oNzrEUBBtK7S30tHFcXIoeUZjYjLSNTDdFS9jJnolgOlgw7SuGPx_tGyQtw';
+$settings['hash_salt'] = '8D7g5w1zKBaIBcQXNZg5qIOEjYUbwMAY3F_AX4UQSLnZsdCb987nEv2wo27yvdGzRx1_12bmCQ';
 
 /**
  * Deployment identifier.
@@ -784,7 +784,7 @@ $settings['entity_update_batch_size'] = 50;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'contributed_live',
+  'database' => 'contributed_dev',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
@@ -794,4 +794,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_FKDMbw3NdvGSS3aYShCsPyWMo28qtOedAlRke6X-e0cSg0nRJavGcixZjvSHmrOeyFn5Rw8Q-Q/sync';
+$config_directories['sync'] = 'sites/default/files/config_BEVSZU8gbctBbsGXBVBkpgHgomQXnw3h3j7jJAcKHtwPrjngdjGDCgqL_mKnCGcSsIKQ-thCSQ/sync';
