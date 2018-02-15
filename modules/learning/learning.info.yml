@@ -1,7 +1,8 @@
 name: Learning Example
 type: module
-description: 'Demonstrates how to display a page at a given URL.'
+description: 'Demonstrates how to display a page and block at a given URL.'
 core: 8.x
 dependencies:
   - drupal:node
+  - drupal:block
 
