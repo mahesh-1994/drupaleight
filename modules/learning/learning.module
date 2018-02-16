@@ -60,6 +60,16 @@ function learning_cron() {
 
     // Detailed debug information:
 	  // \Drupal::logger('learning4')->debug($block->field_last_price->value);
-
+    // $url = "http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=BAC&callback=myFunction";
+    // $client = \Drupal::httpClient();
+    // try {
+    //   $response = $client->get($url);
+    //   $data = $response->getBody();
+    //   $code = $response->getStatusCode();
+    //   $header = $response->getHeaders();
+    // }
+    // catch (RequestException $e) {
+    //   watchdog_exception('learning', $e);
+    // }
   }
 }
