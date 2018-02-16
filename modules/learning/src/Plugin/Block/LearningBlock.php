@@ -21,6 +21,7 @@ class LearningBlock extends BlockBase implements BlockPluginInterface {
    * {@inheritdoc}
    */  
   public function build() {
+    
     $config = $this->getConfiguration();
 
     if (!empty($config['learning_name'])) {
@@ -33,8 +34,9 @@ class LearningBlock extends BlockBase implements BlockPluginInterface {
       '#markup' => $this->t('Hello @name!', array(
         '@name' => $name,
       )),
-    );
+    ); 
   }
+
 
   /**
    * {@inheritdoc}

@@ -19,6 +19,8 @@ class LearningController extends ControllerBase {
    * appropriate blocks, navigation, and styling.
    */
   public function simple() {
+    // \Drupal::lock()->release('cron');
+
     return [
       '#markup' => '<h1>'.t('This is my first module').'</h1>'.'<p>' . $this->t('English Pangram: The quick brown fox jumps over the lazy dog.') . '</p>',
     ];

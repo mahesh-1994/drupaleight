@@ -1,0 +1,65 @@
+<?php 
+use GuzzleHttp\Exception\RequestException;
+use Drupal\Core\Database\Database;
+use Drupal\Component\Serialization\Json;
+/**
+ * @file
+ * Demonstrates use of the Cron API in Drupal - hook_cron().
+ */
+
+/**
+ * @defgroup cron_example Example: Cron
+ * @ingroup examples
+ * @{
+ * Example using Cron API, including hook_cron() and @QueueWorker plugins
+ *
+ * This example is part of the Examples for Developers Project
+ * which you can download and experiment with at
+ * http://drupal.org/project/examples
+ */
+
+/**
+ * Implements hook_cron().
+ *
+ * We implement hook_cron() to do "background" processing. It gets called every
+ * time the Drupal cron runs. We then decide what has to happen in response.
+ *
+ * In this example, we log a message after the time given in the state value
+ * 'cron_example.next_execution'. Then we update that variable to a time in the
+ * future.
+ */
+function learning_cron() {
+     
+  $blocks = \Drupal::entityTypeManager()
+      ->getStorage('block_content')
+      ->loadByProperties(array('type' => 'stock_exchange_rate_card'));
+  
+  foreach ($blocks as $block) {
+  	
+  	$value = $block->field_symbol->value;
+
+    // Detailed debug information:
+	  // \Drupal::logger('learning1')->debug($value);
+
+    $url = 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol='.$value.'&callback=myFunction';
+    $response = \Drupal::httpClient()->get($url, array('headers' => array('Accept' => 'text/plain')));
+    $data = (string) $response->getBody();
+
+    $decoded_data = Json::decode($data);
+
+    $last_price = $decoded_data['LastPrice'];
+    $change = $decoded_data['Change'];
+  
+  	// Detailed debug information:
+  	// \Drupal::logger('learning2')->debug($last_price);
+  	// \Drupal::logger('learning3')->debug($change);
+    
+    $block->set('field_change',$change);
+    $block->set('field_last_price',$last_price);
+    $block->save();
+
+    // Detailed debug information:
+	  // \Drupal::logger('learning4')->debug($block->field_last_price->value);
+
+  }
+}

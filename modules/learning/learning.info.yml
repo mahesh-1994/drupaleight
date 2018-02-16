@@ -6,3 +6,4 @@ dependencies:
   - drupal:node
   - drupal:block
 
+configure: learning.settings
