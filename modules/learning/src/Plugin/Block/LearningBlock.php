@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @Block(
  *   id = "learning",
- *   admin_label = @Translation("Learning block"),
+ *   admin_label = @Translation("Learning drupal 8"),
  *   category = @Translation("Learning World"),
  * )
  */
@@ -36,6 +36,12 @@ class LearningBlock extends BlockBase implements BlockPluginInterface {
       )),
     ); 
   }
+  
+  //   public function build() {
+  //   return array(
+  //     '#markup' => $this->t('Hello, World!'),
+  //   );
+  // }
 
 
   /**

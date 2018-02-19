@@ -6,3 +6,11 @@ learning_simple:
   requirements:
     _permission: 'access learning content'
 
+learning.config:
+  path: '/learning/config'
+  defaults:
+    _form: '\Drupal\learning\Form\LearningSettingForm'
+    _title: 'Learning Configuration'
+  requirements:
+    _permission: 'access learning configuration'
+

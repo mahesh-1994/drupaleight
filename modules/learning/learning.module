@@ -1,5 +1,5 @@
 <?php 
-use GuzzleHttp\Exception\RequestException;
+// use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\Database\Database;
 use Drupal\Component\Serialization\Json;
 /**
@@ -29,6 +29,18 @@ use Drupal\Component\Serialization\Json;
  * future.
  */
 function learning_cron() {
+
+	  // $url = "http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=BAC&callback=myFunction";
+    // $client = \Drupal::httpClient();
+    // try {
+    //   $response = $client->get($url);
+    //   $data = $response->getBody();
+    //   $code = $response->getStatusCode();
+    //   $header = $response->getHeaders();
+    // }
+    // catch (RequestException $e) {
+    //   watchdog_exception('learning', $e);
+    // }
      
   $blocks = \Drupal::entityTypeManager()
       ->getStorage('block_content')
@@ -60,16 +72,6 @@ function learning_cron() {
 
     // Detailed debug information:
 	  // \Drupal::logger('learning4')->debug($block->field_last_price->value);
-    // $url = "http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=BAC&callback=myFunction";
-    // $client = \Drupal::httpClient();
-    // try {
-    //   $response = $client->get($url);
-    //   $data = $response->getBody();
-    //   $code = $response->getStatusCode();
-    //   $header = $response->getHeaders();
-    // }
-    // catch (RequestException $e) {
-    //   watchdog_exception('learning', $e);
-    // }
+
   }
 }

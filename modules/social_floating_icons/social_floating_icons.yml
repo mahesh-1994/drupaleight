@@ -1,8 +1,7 @@
-name: Social Contact Info
+name: Social Floating Icons
 type: module
 description: This module helps to display social website information using drupal blocks.
 package: contributed
 core: 8.x
 dependencies:
-  - drupal:node
   - drupal:block
