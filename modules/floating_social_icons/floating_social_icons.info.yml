@@ -1,7 +1,7 @@
-name: Social Floating Icons
+name: Floating Social Icons
 type: module
 description: This module helps to display social website information using drupal blocks.
-package: contributed
+package: custom
 core: 8.x
 dependencies:
   - drupal:block
