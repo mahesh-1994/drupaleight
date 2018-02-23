@@ -48,10 +48,6 @@ class FloatingSocialIconsBlock extends BlockBase {
 
     // return $build;
     
-    // return [
-    //   '#markup' => $this->t('Hello, World!'),
-    // ];
-
     return [
       '#theme' => 'floating_social_icons_display',
       '#social_values' => $social_values,
