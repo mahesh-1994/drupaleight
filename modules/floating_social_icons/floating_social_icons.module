@@ -1,12 +1,10 @@
 <?php
 
 function floating_social_icons_theme($existing, $type, $theme, $path) {
-  return array(
-    'block__floating_social_icons' => array(
-      'render element' => 'elements',
-      'template' => 'block--floating-social-icons',
-      'base hook' => 'block'
-    )
-  );
+    return [
+        'floating_social_icons_display' => [
+            'variables' => ['social_values' => NULL],
+            'template' => 'block--floating-social-icons',
+        ],
+    ];
 }
-
