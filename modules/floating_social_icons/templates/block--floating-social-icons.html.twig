@@ -27,14 +27,56 @@
  * @ingroup themeable
  */
 #}
-<h1><a href="{{ social_values.facebook }}">This TPL is working</a></h1>
-<div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+
+
+{% if social_values.icons == '1' %}
+  {% set main_class = 'floating-social-icons-top' %}
+  {% set sub_class = 'floating-horizontal' %}
+{% else %}
+  {% set sub_class = 'floating-vertical' %}
+{% endif %}
+
+
+
+
+
+<div id="floating-icons">
+	<div class="{{ main_class }} floating-social-icons-top">
+  	<div class="{{ sub_class }}">
+			<a title="link to facebook" class="facebook pop-upper" href="{{ social_values.facebook }}">
+			<span class="fa fa-facebook"></span>
+			</a>
+		</div>
+    
+   	<div class="{{ sub_class }}">
+			<a title="link to google-plus" class="google-plus pop-upper" href="{{ social_values.google_plus }}">
+				<span class="fa fa-google-plus"></span>
+			</a>
+		</div>
+
+  	<div class="{{ sub_class }}">
+			<a title="link to linkedin" class="linkedin pop-upper" href="{{ social_values.linkedIn }}">
+				<span class="fa fa-linkedin"></span>
+			</a>
+		</div>
+
+		<div class="{{ sub_class }}">
+			<a title="link to twitter" class="twitter pop-upper" href="{{ social_values.twitter }}">
+				<span class="fa fa-twitter"></span>
+			</a>
+		</div>
+
+		<div class="{{ sub_class }}">
+			<a title="link to pinterest" class="pinterest pop-upper" href="{{ social_values.pinterest }}">
+				<span class="fa fa-pinterest"></span>
+			</a>
+		</div>
+
+		<div class="{{ sub_class }}">
+			<a title="link to instagram" class="instagram pop-upper" href="{{ social_values.instagram }}">
+				<span class="fa fa-instagram"></span>
+			</a>
+		</div>
+	</div>
 </div>
+

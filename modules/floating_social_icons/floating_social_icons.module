@@ -8,3 +8,4 @@ function floating_social_icons_theme($existing, $type, $theme, $path) {
         ],
     ];
 }
+
